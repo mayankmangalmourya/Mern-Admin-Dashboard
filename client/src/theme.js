@@ -5,7 +5,6 @@ export const tokensDark = {
     0: "#ffffff",
     10: "#f6f6f6",
     50: "#f0f0f0",
-
     100: "#e0e0e0",
     200: "#c2c2c2",
     300: "#a3a3a3",

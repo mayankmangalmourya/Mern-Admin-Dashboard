@@ -1,5 +1,5 @@
 import { CssBaseline, ThemeProvider } from "@mui/material";
-import {createTheme} from "@mui/material/styles";
+import { createTheme } from "@mui/material/styles";
 import { useMemo } from "react";
 import { useSelector } from "react-redux";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -18,14 +18,8 @@ function App() {
           <CssBaseline/>
           <Routes>
             <Route element={<Layout />}>
-              <Route path="/" element = {
-                <Navigate to = "/dashboard" replace />
-                }
-              />
-              <Route path="/dashboard" element = {
-                  <Dashboard />
-                }
-              />
+              <Route path="/" element = { <Navigate to = "/dashboard" replace /> } />
+              <Route path="/dashboard" element = { <Dashboard /> } />
             </Route>
           </Routes>
         </ThemeProvider>
