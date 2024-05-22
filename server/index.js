@@ -12,6 +12,13 @@ import managementRoutes from "./routes/management.js";
 import salesRoutes from "./routes/sales.js";
 
 /*
+    Data Imports
+*/
+
+import User from "./models/User.js";
+import { dataUser } from "./data/index.js"
+
+/*
     Configurations
 */
 
@@ -47,5 +54,7 @@ mongoose
   })
   .then(() => {
     app.listen(PORT, () => console.log(`Server Port: ${PORT}`));
+    // Only add data one time
+    User.insertMany(dataUser);
   })
   .catch((error) => console.log(`${error} did not connect`));
